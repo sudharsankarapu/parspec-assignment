@@ -1,0 +1,87 @@
+--91c14e45-A--
+[04/Oct/2025:05:41:01.331529 +0000] aOCzbdWOE7fGXzecD5dMdgAAAAA ::1 57660 ::1 80
+--91c14e45-B--
+POST /page1.php HTTP/1.1
+Host: localhost
+User-Agent: curl/8.5.0
+Accept: */*
+Content-Length: 42
+Content-Type: application/x-www-form-urlencoded
+
+--91c14e45-C--
+username=' OR '1'='1' --&password=anything
+--91c14e45-F--
+HTTP/1.1 302 Found
+Set-Cookie: PHPSESSID=nrkvcrnkkutr77anbjtja5ag1l; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Location: /dashboard.php
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+
+--91c14e45-E--
+
+--91c14e45-H--
+Message: Warning. detected SQLi using libinjection with fingerprint 's&sos' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "66"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: s&sos found within ARGS:username: ' OR '1'='1' --"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"]
+Message: Warning. Operator GE matched 5 at TX:anomaly_score. [file "/usr/share/modsecurity-crs/rules/REQUEST-949-BLOCKING-EVALUATION.conf"] [line "94"] [id "949110"] [msg "Inbound Anomaly Score Exceeded (Total Score: 5)"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-generic"]
+Message: Warning. Operator GE matched 5 at TX:inbound_anomaly_score. [file "/usr/share/modsecurity-crs/rules/RESPONSE-980-CORRELATION.conf"] [line "92"] [id "980130"] [msg "Inbound Anomaly Score Exceeded (Total Inbound Score: 5 - SQLI=5,XSS=0,RFI=0,LFI=0,RCE=0,PHPI=0,HTTP=0,SESS=0): individual paranoia level scores: 5, 0, 0, 0"] [ver "OWASP_CRS/3.3.5"] [tag "event-correlation"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client ::1] ModSecurity: Warning. detected SQLi using libinjection with fingerprint 's&sos' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "66"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: s&sos found within ARGS:username: ' OR '1'='1' --"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"] [hostname "localhost"] [uri "/page1.php"] [unique_id "aOCzbdWOE7fGXzecD5dMdgAAAAA"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client ::1] ModSecurity: Warning. Operator GE matched 5 at TX:anomaly_score. [file "/usr/share/modsecurity-crs/rules/REQUEST-949-BLOCKING-EVALUATION.conf"] [line "94"] [id "949110"] [msg "Inbound Anomaly Score Exceeded (Total Score: 5)"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-generic"] [hostname "localhost"] [uri "/page1.php"] [unique_id "aOCzbdWOE7fGXzecD5dMdgAAAAA"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client ::1] ModSecurity: Warning. Operator GE matched 5 at TX:inbound_anomaly_score. [file "/usr/share/modsecurity-crs/rules/RESPONSE-980-CORRELATION.conf"] [line "92"] [id "980130"] [msg "Inbound Anomaly Score Exceeded (Total Inbound Score: 5 - SQLI=5,XSS=0,RFI=0,LFI=0,RCE=0,PHPI=0,HTTP=0,SESS=0): individual paranoia level scores: 5, 0, 0, 0"] [ver "OWASP_CRS/3.3.5"] [tag "event-correlation"] [hostname "localhost"] [uri "/page1.php"] [unique_id "aOCzbdWOE7fGXzecD5dMdgAAAAA"]
+Apache-Handler: application/x-httpd-php
+Stopwatch: 1759556461323499 8054 (- - -)
+Stopwatch2: 1759556461323499 8054; combined=2772, p1=1592, p2=882, p3=30, p4=95, p5=172, sr=64, sw=1, l=0, gc=0
+Response-Body-Transformed: Dechunked
+Producer: ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/); OWASP_CRS/3.3.5.
+Server: Apache/2.4.58 (Ubuntu)
+Engine-Mode: "DETECTION_ONLY"
+
+--91c14e45-Z--
+
+--43269e1e-A--
+[04/Oct/2025:05:42:40.065284 +0000] aOCz0IiGLUsCyNqQ_9drHwAAAAA ::1 39452 ::1 80
+--43269e1e-B--
+POST /page1.php HTTP/1.1
+Host: localhost
+User-Agent: curl/8.5.0
+Accept: */*
+Content-Length: 42
+Content-Type: application/x-www-form-urlencoded
+
+--43269e1e-C--
+username=' OR '1'='1' --&password=anything
+--43269e1e-F--
+HTTP/1.1 403 Forbidden
+Content-Length: 274
+Content-Type: text/html; charset=iso-8859-1
+
+--43269e1e-E--
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>403 Forbidden</title>
+</head><body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this resource.</p>
+<hr>
+<address>Apache/2.4.58 (Ubuntu) Server at localhost Port 80</address>
+</body></html>
+
+--43269e1e-H--
+Message: Warning. detected SQLi using libinjection with fingerprint 's&sos' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "66"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: s&sos found within ARGS:username: ' OR '1'='1' --"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"]
+Message: Access denied with code 403 (phase 2). Operator GE matched 5 at TX:anomaly_score. [file "/usr/share/modsecurity-crs/rules/REQUEST-949-BLOCKING-EVALUATION.conf"] [line "94"] [id "949110"] [msg "Inbound Anomaly Score Exceeded (Total Score: 5)"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-generic"]
+Message: Warning. Operator GE matched 5 at TX:inbound_anomaly_score. [file "/usr/share/modsecurity-crs/rules/RESPONSE-980-CORRELATION.conf"] [line "92"] [id "980130"] [msg "Inbound Anomaly Score Exceeded (Total Inbound Score: 5 - SQLI=5,XSS=0,RFI=0,LFI=0,RCE=0,PHPI=0,HTTP=0,SESS=0): individual paranoia level scores: 5, 0, 0, 0"] [ver "OWASP_CRS/3.3.5"] [tag "event-correlation"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client ::1] ModSecurity: Warning. detected SQLi using libinjection with fingerprint 's&sos' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "66"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: s&sos found within ARGS:username: ' OR '1'='1' --"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"] [hostname "localhost"] [uri "/page1.php"] [unique_id "aOCz0IiGLUsCyNqQ_9drHwAAAAA"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client ::1] ModSecurity: Access denied with code 403 (phase 2). Operator GE matched 5 at TX:anomaly_score. [file "/usr/share/modsecurity-crs/rules/REQUEST-949-BLOCKING-EVALUATION.conf"] [line "94"] [id "949110"] [msg "Inbound Anomaly Score Exceeded (Total Score: 5)"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-generic"] [hostname "localhost"] [uri "/page1.php"] [unique_id "aOCz0IiGLUsCyNqQ_9drHwAAAAA"]
+Apache-Error: [file "apache2_util.c"] [line 275] [level 3] [client ::1] ModSecurity: Warning. Operator GE matched 5 at TX:inbound_anomaly_score. [file "/usr/share/modsecurity-crs/rules/RESPONSE-980-CORRELATION.conf"] [line "92"] [id "980130"] [msg "Inbound Anomaly Score Exceeded (Total Inbound Score: 5 - SQLI=5,XSS=0,RFI=0,LFI=0,RCE=0,PHPI=0,HTTP=0,SESS=0): individual paranoia level scores: 5, 0, 0, 0"] [ver "OWASP_CRS/3.3.5"] [tag "event-correlation"] [hostname "localhost"] [uri "/page1.php"] [unique_id "aOCz0IiGLUsCyNqQ_9drHwAAAAA"]
+Action: Intercepted (phase 2)
+Apache-Handler: application/x-httpd-php
+Stopwatch: 1759556560062421 2888 (- - -)
+Stopwatch2: 1759556560062421 2888; combined=1487, p1=533, p2=836, p3=0, p4=0, p5=117, sr=57, sw=1, l=0, gc=0
+Response-Body-Transformed: Dechunked
+Producer: ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/); OWASP_CRS/3.3.5.
+Server: Apache/2.4.58 (Ubuntu)
+Engine-Mode: "ENABLED"
+
+--43269e1e-Z--
+
