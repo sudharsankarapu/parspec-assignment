@@ -1,0 +1,10 @@
+apache2
+libapache2-mod-php
+php
+php-sqlite3
+php-xml
+git
+unzip
+
+# Install command:
+# sudo apt update && sudo apt install -y apache2 libapache2-mod-php php php-sqlite3 php-xml git unzip
