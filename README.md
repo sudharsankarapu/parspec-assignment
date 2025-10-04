@@ -41,10 +41,6 @@ Web:
 - Screenshots: page1_loggedin.png, page2_failed.png, page1_blocked.png
 
 ## 6. Repo & submission
-Repo: https://github.com/YOUR_GITHUB_USERNAME/parspec-assignment  
+Repo: https://github.com/sudharsankarapu/parspec-assignment/
 Public pages: /page1.php (exploitable), /page2.php (non-exploitable)
 
-## 7. Notes
-- demo.db contains demo credentials (plaintext) — for demo only.
-- After submission: restrict SSH in Security Group to your IP.
-# parspec-assignment
